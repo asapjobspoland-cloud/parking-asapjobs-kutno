@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Parking Kutno 24h – autokary, ciężarówki, busy | Parking ASAPjobs</title>
 <meta name="description" content="Strzeżony parking w Kutnie, ul. Objazdowa 35, czynny całą dobę: ochrona, monitoring, ogrodzenie, oświetlenie, WC. Parking dla autokarów, ciężarówek, busów i aut osobowych. Od 20 zł za dobę. Tel. 570 501 207.">
+<link rel="canonical" href="https://kutno-parking-asap.netlify.app/">
 <meta name="theme-color" content="#0B1426">
 <link rel="icon" type="image/png" href="zdjecia/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -274,7 +275,7 @@
   <svg class="i"><use href="#i-phone"/></svg> <a href="tel:+48570501207">tel. 570 501 207</a> &nbsp;•&nbsp; <svg class="i"><use href="#i-clock"/></svg> Czynne 24h / 7 dni
 </footer>
 
-<div class="lb" id="lb" role="dialog" aria-label="Powiększone zdjęcie"><button aria-label="Zamknij">&times;</button><img alt=""></div>
+<div class="lb" id="lb" role="dialog" aria-label="Powiększone zdjęcie"><button aria-label="Zamknij">&times;</button></div>
 
 <div class="callbar"><a class="btn" href="tel:+48570501207"><svg class="i"><use href="#i-phone"/></svg> Zadzwoń: 570 501 207</a></div>
 
@@ -292,7 +293,7 @@
     var t0=performance.now(),d=1300;
     (function step(t){var p=Math.min((t-t0)/d,1),k=1-Math.pow(1-p,3);el.textContent=Math.round(to*k);if(p<1)requestAnimationFrame(step)})(t0);
   }
-  var lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+  var lb=document.getElementById('lb'),lbi=document.createElement('img');lb.appendChild(lbi);
   document.querySelectorAll('.galeria img,.znak img').forEach(function(im){im.parentNode.addEventListener('click',function(){lbi.src=im.src;lbi.alt=im.alt;lb.classList.add('open')})});
   lb.addEventListener('click',function(){lb.classList.remove('open')});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open')});

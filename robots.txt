@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kutno-parking-asap.netlify.app/sitemap.xml
